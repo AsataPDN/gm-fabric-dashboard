@@ -1,13 +1,9 @@
-import * as storybook from "@storybook/react";
 import { configure } from "@storybook/react";
 import { setDefaults } from "@storybook/addon-info";
 import { setOptions } from "@storybook/addon-options";
 
-const req = require.context("../src", true, /\.stories\.js$/);
-
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
-  // require("../stories");
+  require("../stories");
 }
 
 // addon-info
@@ -33,7 +29,7 @@ setOptions({
    * name to display in the top left corner
    * @type {String}
    */
-  name: "GM Fabric Dashboard Storybook",
+  name: "Storybook",
   /**
    * URL for name in top left corner to link to
    * @type {String}
@@ -93,4 +89,4 @@ setOptions({
   selectedAddonPanel: undefined // The order of addons in the "Addons Panel" is the same as you import them in 'addons.js'. The first panel will be opened by default as you run Storybook
 });
 
-storybook.configure(loadStories, module);
+configure(loadStories, module);
