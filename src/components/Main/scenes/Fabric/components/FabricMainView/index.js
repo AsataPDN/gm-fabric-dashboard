@@ -44,7 +44,7 @@ export default function FabricMainView({
     return (
       <ErrorBoundary>
         <GMServiceCardView
-          groupByAttribute={groupByAttribute}
+          groupByAttribute={undefined}
           sortByAttribute={sortByAttribute}
           services={mappedServices}
         />

@@ -32,25 +32,26 @@ function SummaryGrid({
       <LayoutSection title={"Vitals"}>
         <ReadoutGroup>
           <Readout
-            readoutItems={[
-              {
-                detail: dateFormat(
-                  getLatestAttribute(metrics, "jvm/start_time")
-                ),
-                icon: "future",
-                title: "Uptime",
-                value: (
-                  <UpTime
-                    startTime={getLatestAttribute(metrics, "jvm/start_time")}
-                    render={uptime => (
-                      <ArrayValue>
-                        {_.map(uptime, el => <span>{el} </span>)}
-                      </ArrayValue>
-                    )}
-                  />
-                )
-              }
-            ]}
+            readoutItems={"dude"}
+            // {[
+            //   {
+            //     detail: dateFormat(
+            //       getLatestAttribute(metrics, "jvm/start_time")
+            //     ),
+            //     icon: "future",
+            //     title: "Uptime",
+            //     value: (
+            //       <UpTime
+            //         startTime={getLatestAttribute(metrics, "jvm/start_time")}
+            //         render={uptime => (
+            //           <ArrayValue>
+            //             {_.map(uptime, el => <span>{el} </span>)}
+            //           </ArrayValue>
+            //         )}
+            //       />
+            //     )
+            //   }
+            // ]}
           />
 
           <Readout

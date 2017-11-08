@@ -1,6 +1,9 @@
 import PropTypes from "prop-types";
 import React from "react";
 
+import Glyph from "components/Glyphs/index";
+import Icon from "components/Icon/index";
+
 class ErrorBoundary extends React.Component {
   static propTypes = {
     children: PropTypes.oneOfType([
@@ -29,7 +32,9 @@ class ErrorBoundary extends React.Component {
     ) : (
       <div className="no-routes-found-error">
         <div className="content">
-          <span data-uk-icon="icon: warning; ratio: 1.8" />
+          <svg width="30px" height="20px" viewBox="6 8 10 10">
+            <Glyph name="Exclamation" />
+          </svg>
           <span>{`Error: ${this.state.info}`}</span>
         </div>
       </div>
