@@ -53,12 +53,14 @@ module.exports = {
       // in development "style" loader enables hot editing of CSS.
       {
         test: /\.(css|scss)$/,
+        include: path.resolve(__dirname, "../src"),
         use: [
           require.resolve("style-loader"),
           {
             loader: require.resolve("css-loader"),
             options: {
               importLoaders: 1,
+              modules: true,
               sourceMap: true
             }
           },
