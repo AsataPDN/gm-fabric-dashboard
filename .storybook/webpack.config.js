@@ -53,13 +53,12 @@ module.exports = {
       // in development "style" loader enables hot editing of CSS.
       {
         test: /\.(css|scss)$/,
-        include: path.resolve(__dirname, "../src"),
         use: [
           require.resolve("style-loader"),
           {
             loader: require.resolve("css-loader"),
             options: {
-              importLoaders: 1,
+              importLoaders: 3,
               modules: true,
               sourceMap: true
             }
@@ -68,9 +67,6 @@ module.exports = {
           {
             loader: require.resolve("postcss-loader"),
             options: {
-              // Necessary for external CSS imports to work
-              // https://github.com/facebookincubator/create-react-app/issues/2677
-              ident: "postcss",
               sourceMap: true,
               plugins: () => [
                 require("postcss-flexbugs-fixes"),
@@ -101,8 +97,6 @@ module.exports = {
   plugins: [
     // Add module names to factory functions so they appear in browser profiler.
     new webpack.NamedModulesPlugin(),
-    // This is necessary to emit hot updates (currently CSS only):
-    new webpack.HotModuleReplacementPlugin(),
     // Watcher doesn't work well if you mistype casing in a path so we use
     // a plugin that prints an error when you attempt to do this.
     // See https://github.com/facebookincubator/create-react-app/issues/240
