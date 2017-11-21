@@ -7,8 +7,7 @@ import SearchInput from "./components/GMSearchInput";
 import Button from "../../../Button";
 import Form from "./components/Form";
 import SecondaryText from "components/SecondaryText";
-import GMSelect from "./components/GMSelect";
-
+import GMSelect from "components/Main/components/GMSelect";
 import Toolbar from "./components/Toolbar";
 import ToolbarLeft from "./components/ToolbarLeft";
 import ToolbarRight from "./components/ToolbarRight";
@@ -30,11 +29,6 @@ TableToolbar.propTypes = {
   sortByProps: PropTypes.object // optional props that will be passed down to GMSelect Sort By dropdown
 };
 
-TableToolbar.defaultProps = {
-  filterString: "",
-  setGroupByAttribute: () => {},
-  setFilterString: () => {}
-};
 export default function TableToolbar({
   displayType,
   setDisplayType,
@@ -53,63 +47,75 @@ export default function TableToolbar({
   return (
     <Toolbar>
       <ToolbarLeft>
-        <Form>
-          <SearchInput
-            className="Form-control"
-            onChange={evt => setFilterString(evt.target.value)}
-            placeholder="Search Services"
-            aria-label="Search All Services"
-            value={filterString}
-          />
-        </Form>
+        {setFilterString &&
+          filterString && (
+            <Form>
+              <SearchInput
+                {...searchInputProps}
+                onChange={evt => setFilterString(evt.target.value)}
+                placeholder="Search Services"
+                aria-label="Search All Services"
+                value={filterString}
+              />
+            </Form>
+          )}
       </ToolbarLeft>
-      <ToolbarCenter>
-        {
-          // <Button
-          //   active={displayType === "Card"}
-          //   clickAction={() => setDisplayType("Card")}
-          //   glyph="Card"
-          //   label="Card"
-          // />
-          // <Button
-          //   active={displayType === "Table"}
-          //   clickAction={() => setDisplayType("Table")}
-          //   glyph="List"
-          //   label="List"
-          // />
-        }
-      </ToolbarCenter>
+      {setDisplayType &&
+        displayType && (
+          <ToolbarCenter>
+            <Button
+              active={displayType === "Card"}
+              clickAction={() => setDisplayType("Card")}
+              glyph="Card"
+              label="Card"
+            />
+            <Button
+              active={displayType === "Table"}
+              clickAction={() => setDisplayType("Table")}
+              glyph="List"
+              label="List"
+            />
+          </ToolbarCenter>
+        )}
       <ToolbarRight>
-        {
-          // <GMSelect
-          //   name="form-field-group-by"
-          //   options={[]}
-          //   value={groupByAttribute}
-          //   onChange={val => setGroupByAttribute(val.value)}
-          //   clearable={false}
-          //   searchable={false}
-          //   valueRenderer={val => (
-          //     <span>
-          //       <span>Group </span>
-          //       <SecondaryText>{val.label}</SecondaryText>
-          //     </span>
-          //   )}
-          // />
-          // <GMSelect
-          //   name="form-field-sort-by"
-          //   options={[]}
-          //   value={sortByAttribute}
-          //   onChange={val => setSortByAttribute(val.value)}
-          //   clearable={false}
-          //   searchable={false}
-          //   valueRenderer={val => (
-          //     <span>
-          //       <span>Sort </span>
-          //       <SecondaryText>{val.label}</SecondaryText>
-          //     </span>
-          //   )}
-          // />
-        }
+        {setGroupByAttribute &&
+          groupByOptions &&
+          groupByAttribute && (
+            <GMSelect
+              {...groupByProps}
+              name="form-field-group-by"
+              options={groupByOptions}
+              value={groupByAttribute}
+              onChange={val => setGroupByAttribute(val.value)}
+              clearable={false}
+              searchable={false}
+              valueRenderer={val => (
+                <span>
+                  <span>Group </span>
+                  <SecondaryText>{val.label}</SecondaryText>
+                </span>
+              )}
+            />
+          )}
+        {setSortByAttribute &&
+          sortByOptions &&
+          sortByAttribute && (
+            <GMSelect
+              {...sortByProps}
+              name="form-field-sort-by"
+              options={sortByOptions}
+              value={sortByAttribute}
+              onChange={val => setSortByAttribute(val.value)}
+              clearable={false}
+              searchable={false}
+              valueRenderer={val => (
+                <span>
+                  <span>Sort </span>
+                  <SecondaryText>{val.label}</SecondaryText>
+                </span>
+              )}
+            />
+          )}
       </ToolbarRight>
     </Toolbar>
   );
