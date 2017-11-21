@@ -14,6 +14,7 @@ import { microserviceStatuses } from "utils/constants";
 // styled components
 
 GMServiceListView.propTypes = {
+  ascending: PropTypes.boolean,
   groupByAttribute: PropTypes.string.isRequired,
   location: PropTypes.object,
   services: PropTypes.array.isRequired,
@@ -24,6 +25,7 @@ function GMServiceListView({
   groupByAttribute,
   sortByAttribute,
   services,
+  ascending,
   location: { pathname }
 }) {
   // get unique headers
@@ -61,7 +63,7 @@ function GMServiceListView({
                 items={_.orderBy(
                   dataGroupedByHeader[header],
                   [sortByAttribute.toLowerCase(), "name"],
-                  ["asc", "asc"]
+                  ascending ? ["asc"] : ["desc"]
                 )}
                 groupByAttribute={groupByAttribute}
               />
@@ -79,7 +81,7 @@ function GMServiceListView({
               items={_.orderBy(
                 services,
                 [sortByAttribute.toLowerCase(), "name"],
-                ["asc", "asc"]
+                ascending ? ["asc"] : ["desc"]
               )}
             />
           </SectionContent>

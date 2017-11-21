@@ -19,13 +19,19 @@ import SectionHeader from "./components/SectionHeader";
 // docsLink: URL to the documentation
 // status: string equal to "Stable", "Warning", or "Down"
 SectionCardsView.propTypes = {
+  ascending: PropTypes.bool,
   groupByAttribute: PropTypes.string.isRequired,
   location: PropTypes.object,
   services: PropTypes.array.isRequired,
   sortByAttribute: PropTypes.string.isRequired
 };
 
-function SectionCardsView({ groupByAttribute, sortByAttribute, services }) {
+function SectionCardsView({
+  groupByAttribute,
+  sortByAttribute,
+  services,
+  ascending
+}) {
   if (groupByAttribute !== "None") {
     const dataGroupedByHeader = _.groupBy(services, item =>
       item.headerTitle.toLowerCase()
@@ -66,7 +72,7 @@ function SectionCardsView({ groupByAttribute, sortByAttribute, services }) {
                 items={_.orderBy(
                   dataGroupedByHeader[header],
                   [sortByAttribute.toLowerCase(), "name"],
-                  ["asc", "asc"]
+                  ascending ? ["asc"] : ["desc"]
                 )}
               />
             </SectionContent>
@@ -83,7 +89,7 @@ function SectionCardsView({ groupByAttribute, sortByAttribute, services }) {
               items={_.orderBy(
                 services,
                 [sortByAttribute.toLowerCase(), "name"],
-                ["asc", "asc"]
+                ascending ? ["asc"] : ["desc"]
               )}
             />
           </SectionContent>

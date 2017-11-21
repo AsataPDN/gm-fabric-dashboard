@@ -8,6 +8,7 @@ import ErrorBoundary from "components/ErrorBoundary";
 import { computeStatus } from "utils/selectors";
 
 FabricMainView.propTypes = {
+  ascending: PropTypes.boolean,
   displayType: PropTypes.string.isRequired,
   groupByAttribute: PropTypes.string.isRequired,
   services: PropTypes.array.isRequired,
@@ -19,7 +20,8 @@ export default function FabricMainView({
   displayType,
   groupByAttribute,
   sortByAttribute,
-  services
+  services,
+  ascending
 }) {
   // Do data transformation stuff
   const mappedServices = services.map(service => {
@@ -47,6 +49,7 @@ export default function FabricMainView({
           groupByAttribute={groupByAttribute}
           sortByAttribute={sortByAttribute}
           services={mappedServices}
+          ascending={ascending}
         />
       </ErrorBoundary>
     );
@@ -57,6 +60,7 @@ export default function FabricMainView({
           groupByAttribute={groupByAttribute}
           sortByAttribute={sortByAttribute}
           services={mappedServices}
+          ascending={ascending}
         />
       </ErrorBoundary>
     );

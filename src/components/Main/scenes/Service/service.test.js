@@ -9,9 +9,9 @@ const mockData = {
   serviceVersion: "1.0",
   status: "stable",
   instances: [
-    { name: "1ridkelvyaw", start_time: 600000000000 },
-    { name: "6ojc5ulukgw", start_time: 300000000000 },
-    { name: "7b1ry66rkwg", start_time: 400000000000 }
+    { name: "serviceID1", start_time: 600000000000 },
+    { name: "serviceID2", start_time: 300000000000 },
+    { name: "serviceID3", start_time: 400000000000 }
   ]
 };
 
@@ -30,9 +30,9 @@ describe("Service View", () => {
 
   test("renders all instances", () => {
     expect(wrapper.find("GMServiceTableLineItem").length).toBe(3);
-    expect(wrapper.html().includes("1ridkelvyaw")).toBe(true);
-    expect(wrapper.html().includes("6ojc5ulukgw")).toBe(true);
-    expect(wrapper.html().includes("7b1ry66rkwg")).toBe(true);
+    expect(wrapper.html().includes("serviceID1")).toBe(true);
+    expect(wrapper.html().includes("serviceID2")).toBe(true);
+    expect(wrapper.html().includes("serviceID3")).toBe(true);
   });
 
   test("filters by query string", () => {
@@ -41,9 +41,9 @@ describe("Service View", () => {
       .instance()
       .setFilterString("1rid");
 
-    expect(wrapper.html().includes("1ridkelvyaw")).toBe(true);
-    expect(wrapper.html().includes("6ojc5ulukgw")).toBe(false);
-    expect(wrapper.html().includes("7b1ry66rkwg")).toBe(false);
+    expect(wrapper.html().includes("serviceID1")).toBe(true);
+    expect(wrapper.html().includes("serviceID2")).toBe(false);
+    expect(wrapper.html().includes("serviceID3")).toBe(false);
   });
 
   // For the following tests, I am finding the index of each instance name in the html
@@ -54,13 +54,13 @@ describe("Service View", () => {
       .instance()
       .setSortByAttribute("start_time");
 
-    const positionOf_1ridkelvyaw = wrapper.html().indexOf("1ridkelvyaw");
-    const positionOf_6ojc5ulukgw = wrapper.html().indexOf("6ojc5ulukgw");
-    const positionOf_7b1ry66rkwg = wrapper.html().indexOf("7b1ry66rkwg");
+    const positionOf_serviceID1 = wrapper.html().indexOf("serviceID1");
+    const positionOf_serviceID2 = wrapper.html().indexOf("serviceID2");
+    const positionOf_serviceID3 = wrapper.html().indexOf("serviceID3");
 
-    // Expected order is 6ojc5ulukgw, 7b1ry66rkwg, 1ridkelvyaw
-    expect(positionOf_6ojc5ulukgw).toBeLessThan(positionOf_7b1ry66rkwg);
-    expect(positionOf_7b1ry66rkwg).toBeLessThan(positionOf_1ridkelvyaw);
+    // Expected order is serviceID2, serviceID3, serviceID1
+    expect(positionOf_serviceID2).toBeLessThan(positionOf_serviceID3);
+    expect(positionOf_serviceID3).toBeLessThan(positionOf_serviceID1);
   });
 
   test("sorts by name", () => {
@@ -69,12 +69,12 @@ describe("Service View", () => {
       .instance()
       .setSortByAttribute("name");
 
-    const positionOf_1ridkelvyaw = wrapper.html().indexOf("1ridkelvyaw");
-    const positionOf_6ojc5ulukgw = wrapper.html().indexOf("6ojc5ulukgw");
-    const positionOf_7b1ry66rkwg = wrapper.html().indexOf("7b1ry66rkwg");
+    const positionOf_serviceID1 = wrapper.html().indexOf("serviceID1");
+    const positionOf_serviceID2 = wrapper.html().indexOf("serviceID2");
+    const positionOf_serviceID3 = wrapper.html().indexOf("serviceID3");
 
-    // Expected order is 1ridkelvyaw, 6ojc5ulukgw, 7b1ry66rkwg
-    expect(positionOf_1ridkelvyaw).toBeLessThan(positionOf_6ojc5ulukgw);
-    expect(positionOf_6ojc5ulukgw).toBeLessThan(positionOf_7b1ry66rkwg);
+    // Expected order is serviceID1, serviceID2, serviceID3
+    expect(positionOf_serviceID1).toBeLessThan(positionOf_serviceID2);
+    expect(positionOf_serviceID2).toBeLessThan(positionOf_serviceID3);
   });
 });
