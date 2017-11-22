@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 // Importing internal subcomponents
 import ThreadsTable from "./components/ThreadsTable";
-import ThreadsTableToolbar from "./components/ThreadsTableToolbar";
+// import ThreadsTableToolbar from "./components/ThreadsTableToolbar";
 
 // Importing external deps from src as WebPack Modules directory
 import { getVisibleThreads, getThreadCounts } from "utils/jvm/selectors";
@@ -24,10 +24,12 @@ class ThreadsSection extends Component {
     const { threadCounts, threads, threadsFilter } = this.props;
     return (
       <div>
-        <ThreadsTableToolbar
-          threadCounts={threadCounts}
-          threadsFilter={threadsFilter}
-        />
+        {
+          // <ThreadsTableToolbar
+          //   threadCounts={threadCounts}
+          //   threadsFilter={threadsFilter}
+          // />
+        }
         <ThreadsTable filteredThreadData={threads} />
       </div>
     );

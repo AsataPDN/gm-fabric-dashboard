@@ -4,7 +4,7 @@ import { Actions } from "jumpstate";
 import _ from "lodash";
 
 import GMServiceTable from "./components/GMServiceTable";
-import GMServiceTableToolbar from "./components/GMServiceTableToolbar";
+import TableToolbar from "components/Main/components/TableToolbar";
 import ErrorBoundary from "components/ErrorBoundary";
 import NotFoundError from "components/Main/components/NotFoundError";
 import { reportError } from "services/notification";
@@ -59,10 +59,11 @@ class GMServiceView extends Component {
 
     return instances && instances.length ? (
       <div>
-        <GMServiceTableToolbar
+        <TableToolbar
           setFilterString={this.setFilterString}
-          setSortByAttribute={this.setSortByAttribute}
           filterString={filterString}
+          setSortByAttribute={this.setSortByAttribute}
+          sortByOptions={sortByOptions}
           sortByAttribute={sortByAttribute}
         />
         <ErrorBoundary>
@@ -87,4 +88,14 @@ class GMServiceView extends Component {
   }
 }
 
+const sortByOptions = [
+  {
+    value: "name",
+    label: "Name"
+  },
+  {
+    value: "start_time",
+    label: "Uptime"
+  }
+];
 export default GMServiceView;

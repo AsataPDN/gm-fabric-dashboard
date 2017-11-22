@@ -6,7 +6,7 @@ import React, { Component } from "react";
 
 import { reportError } from "services/notification";
 import NotFoundError from "components/Main/components/NotFoundError";
-import FabricTableToolbar from "./components/FabricTableToolbar";
+import TableToolbar from "components/Main/components/TableToolbar";
 import FabricMainView from "./components/FabricMainView";
 
 class FabricGrid extends Component {
@@ -182,19 +182,25 @@ class FabricGrid extends Component {
       );
     });
 
+    // If we're not rendering a statusView, then pass down sortBy props to render the sortBy dropdown
+    const displaySortBy = !statusView && {
+      sortByOptions: sortByOptions,
+      sortByAttribute: this.state.sortByAttribute,
+      setSortByAttribute: this.setSortByAttribute
+    };
+
     if (services && services.length > 0) {
       return (
         <div>
-          <FabricTableToolbar
+          <TableToolbar
             displayType={this.state.displayType}
             setDisplayType={this.setDisplayType}
-            searchQuery={this.state.searchQuery}
-            onSearchInputChange={this.onSearchInputChange}
+            filterString={this.state.searchQuery}
+            setFilterString={this.onSearchInputChange}
+            groupByOptions={groupByOptions}
             groupByAttribute={this.state.groupByAttribute}
             setGroupByAttribute={this.setGroupByAttribute}
-            sortByAttribute={this.state.sortByAttribute}
-            setSortByAttribute={this.setSortByAttribute}
-            statusView={statusView}
+            {...displaySortBy}
           />
           {/* pass filtered services to FabricMainView */}
           <FabricMainView
@@ -210,5 +216,34 @@ class FabricGrid extends Component {
     }
   }
 }
+const sortByOptions = [
+  {
+    value: "Name",
+    label: "Name"
+  },
+  {
+    value: "Status",
+    label: "Status"
+  }
+];
+
+const groupByOptions = [
+  {
+    value: "Owner",
+    label: "Owner"
+  },
+  {
+    value: "Capability",
+    label: "Capability"
+  },
+  {
+    value: "Status",
+    label: "Status"
+  },
+  {
+    value: "None",
+    label: "None"
+  }
+];
 
 export default FabricGrid;

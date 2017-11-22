@@ -2,7 +2,7 @@ import { PropTypes } from "prop-types";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import RoutesTableToolbar from "./components/RoutesTableToolbar";
+import TableToolbar from "components/Main/components/TableToolbar";
 import RoutesTable from "./components/RoutesTable";
 import ErrorBoundary from "components/ErrorBoundary";
 import { getRoutesTable } from "utils/jvm/selectors";
@@ -79,12 +79,15 @@ class RoutesGrid extends Component {
     if (this.props.routes && this.props.routes.length > 0) {
       return (
         <div>
-          <RoutesTableToolbar
-            filterString={this.state.filterString}
-            setFilterString={this.setFilterString}
-            keyToSortBy={this.state.keyToSortBy}
-            setKeyToSortBy={this.setKeyToSortBy}
-          />
+          {
+            <TableToolbar
+              filterString={this.state.filterString}
+              setFilterString={this.setFilterString}
+              sortByAttribute={this.state.keyToSortBy}
+              setSortByAttribute={this.setKeyToSortBy}
+              sortByOptions={sortByOptions}
+            />
+          }
           <ErrorBoundary>
             <RoutesTable
               routes={this.sort(
@@ -105,6 +108,21 @@ class RoutesGrid extends Component {
     }
   }
 }
+
+const sortByOptions = [
+  {
+    value: "route",
+    label: "Route"
+  },
+  {
+    value: "totalRequests",
+    label: "Total Requests"
+  },
+  {
+    value: "errorPercent",
+    label: "Error %"
+  }
+];
 
 function mapStateToProps(state) {
   return {

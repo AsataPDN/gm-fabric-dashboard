@@ -48,9 +48,10 @@ export default function TableToolbar({
     <Toolbar>
       <ToolbarLeft>
         {setFilterString &&
-          filterString && (
+          filterString != null && (
             <Form>
               <SearchInput
+                className="form-control"
                 {...searchInputProps}
                 onChange={evt => setFilterString(evt.target.value)}
                 placeholder="Search Services"

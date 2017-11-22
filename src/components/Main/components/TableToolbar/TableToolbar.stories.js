@@ -4,14 +4,7 @@ import { storiesOf } from "@storybook/react";
 
 import TableToolbar from "./index.js";
 
-import {
-  withKnobs,
-  text,
-  boolean,
-  object,
-  array,
-  select
-} from "@storybook/addon-knobs";
+import { withKnobs, text, object, select } from "@storybook/addon-knobs";
 
 const sortByOptions = [
   {
@@ -88,7 +81,7 @@ storiesOf("Table Toolbar", module)
       </div>
     );
   })
-  .add("Service View", () => {
+  .add("Service/Function/Routes View", () => {
     return (
       <div style={{ width: "100%" }}>
         <TableToolbar
@@ -103,13 +96,6 @@ storiesOf("Table Toolbar", module)
           )}
           setSortByAttribute={() => alert("Fired setSortByAttribute()")}
         />
-      </div>
-    );
-  })
-  .add("Routes/Functions View", () => {
-    return (
-      <div style={{ width: "100%" }}>
-        <TableToolbar />
       </div>
     );
   });
