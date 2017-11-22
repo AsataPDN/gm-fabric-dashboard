@@ -3,8 +3,8 @@ import React from "react";
 import { PropTypes } from "prop-types";
 
 // Internal Components
-import SearchInput from "./components/GMSearchInput";
-import Button from "../../../Button";
+import SearchInput from "components/Main/components/GMSearchInput";
+import Button from "components/Button";
 import Form from "./components/Form";
 import SecondaryText from "components/SecondaryText";
 import GMSelect from "components/Main/components/GMSelect";
@@ -27,7 +27,14 @@ TableToolbar.propTypes = {
   setSortByAttribute: PropTypes.func, // onChange handler for GMSelect Sort By dropdown
   sortByAttribute: PropTypes.string, // value for controlled GMSelect Sort By dropdown
   sortByOptions: PropTypes.array, // array of option objects for the GMSelect Sort By dropdown
-  sortByProps: PropTypes.object // optional props that will be passed down to GMSelect Sort By dropdown
+  sortByProps: PropTypes.object, // optional props that will be passed down to GMSelect Sort By dropdown
+  // the following are optional props to be rendered as children of their respective columns
+  toolbarCenterChildren: PropTypes.oneOfType([
+    PropTypes.element,
+    PropTypes.node
+  ]),
+  toolbarLeftChildren: PropTypes.oneOfType([PropTypes.element, PropTypes.node]),
+  toolbarRightChildren: PropTypes.oneOfType([PropTypes.element, PropTypes.node])
 };
 
 export default function TableToolbar({
@@ -44,7 +51,10 @@ export default function TableToolbar({
   sortByAttribute,
   sortByOptions,
   sortByProps,
-  setSortByAttribute
+  setSortByAttribute,
+  toolbarLeftChildren,
+  toolbarCenterChildren,
+  toolbarRightChildren
 }) {
   return (
     <Toolbar>
@@ -53,7 +63,6 @@ export default function TableToolbar({
           searchPlaceholder && (
             <Form>
               <SearchInput
-                className="form-control"
                 {...searchInputProps}
                 onChange={evt => setFilterString(evt.target.value)}
                 placeholder={searchPlaceholder}
@@ -62,6 +71,7 @@ export default function TableToolbar({
               />
             </Form>
           )}
+        {toolbarLeftChildren}
       </ToolbarLeft>
       {setDisplayType &&
         displayType && (
@@ -78,6 +88,7 @@ export default function TableToolbar({
               glyph="List"
               label="List"
             />
+            {toolbarCenterChildren}
           </ToolbarCenter>
         )}
       <ToolbarRight>
@@ -119,6 +130,7 @@ export default function TableToolbar({
               )}
             />
           )}
+        {toolbarRightChildren}
       </ToolbarRight>
     </Toolbar>
   );

@@ -86,8 +86,9 @@ class FunctionsGrid extends Component {
           {
             <TableToolbar
               filterString={this.state.filterString}
-              sortByAttribute={this.state.keyToSortBy}
               setFilterString={this.setFilterString}
+              searchPlaceholder="Search Functions"
+              sortByAttribute={this.state.keyToSortBy}
               sortByOptions={sortByOptions}
               setSortByAttribute={this.setKeyToSortBy}
             />

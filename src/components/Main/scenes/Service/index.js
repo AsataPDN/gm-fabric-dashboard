@@ -62,6 +62,7 @@ class GMServiceView extends Component {
         <TableToolbar
           setFilterString={this.setFilterString}
           filterString={filterString}
+          searchPlaceholder="Search Instances"
           setSortByAttribute={this.setSortByAttribute}
           sortByOptions={sortByOptions}
           sortByAttribute={sortByAttribute}

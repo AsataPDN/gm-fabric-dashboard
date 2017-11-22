@@ -83,6 +83,7 @@ class RoutesGrid extends Component {
             <TableToolbar
               filterString={this.state.filterString}
               setFilterString={this.setFilterString}
+              searchPlaceholder="Search Routes"
               sortByAttribute={this.state.keyToSortBy}
               setSortByAttribute={this.setKeyToSortBy}
               sortByOptions={sortByOptions}
