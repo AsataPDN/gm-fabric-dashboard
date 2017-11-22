@@ -182,9 +182,10 @@ class FabricGrid extends Component {
       );
     });
 
-    // If we're not rendering a statusView, then pass down sortBy props to render the sortBy dropdown
+    // If we're not rendering a statusView,
+    // then pass down sortBy props to render the sortBy dropdown
     const displaySortBy = !statusView && {
-      sortByOptions: sortByOptions,
+      sortByOptions,
       sortByAttribute: this.state.sortByAttribute,
       setSortByAttribute: this.setSortByAttribute
     };
@@ -197,6 +198,7 @@ class FabricGrid extends Component {
             setDisplayType={this.setDisplayType}
             filterString={this.state.searchQuery}
             setFilterString={this.onSearchInputChange}
+            searchPlaceholder="Search Services"
             groupByOptions={groupByOptions}
             groupByAttribute={this.state.groupByAttribute}
             setGroupByAttribute={this.setGroupByAttribute}

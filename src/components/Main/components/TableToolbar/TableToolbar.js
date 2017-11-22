@@ -20,6 +20,7 @@ TableToolbar.propTypes = {
   groupByOptions: PropTypes.array, // array of option objects for the GMSelect Group By dropdown
   groupByProps: PropTypes.object, // optional props that will be passed down to SearchInput component
   searchInputProps: PropTypes.object, // optional props that will be passed down to GMSelect Group By dropdown
+  searchPlaceholder: PropTypes.string, // placeholder for SearchInput
   setDisplayType: PropTypes.func, // onClick handler for ToolbarCenter buttons. Takes in either “Card” or “Table”.
   setFilterString: PropTypes.func, // onChange handler for search input
   setGroupByAttribute: PropTypes.func, // onChange handler for GMSelect Group By dropdown
@@ -33,6 +34,7 @@ export default function TableToolbar({
   displayType,
   setDisplayType,
   filterString,
+  searchPlaceholder,
   searchInputProps,
   setFilterString,
   groupByAttribute,
@@ -48,14 +50,14 @@ export default function TableToolbar({
     <Toolbar>
       <ToolbarLeft>
         {setFilterString &&
-          filterString != null && (
+          searchPlaceholder && (
             <Form>
               <SearchInput
                 className="form-control"
                 {...searchInputProps}
                 onChange={evt => setFilterString(evt.target.value)}
-                placeholder="Search Services"
-                aria-label="Search All Services"
+                placeholder={searchPlaceholder}
+                aria-label={searchPlaceholder}
                 value={filterString}
               />
             </Form>
