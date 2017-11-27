@@ -14,7 +14,7 @@ import ToolbarRight from "./components/ToolbarRight";
 import ToolbarCenter from "./components/ToolbarCenter";
 
 TableToolbar.propTypes = {
-  displayType: PropTypes.oneOf(["Card", "Table"]), // if this is a Fabric Grid Toolbar, display type buttons will be rendered
+  displayType: PropTypes.oneOf(["Card", "List"]), // if this is a Fabric Grid Toolbar, display type buttons will be rendered
   filterString: PropTypes.string, // value for controlled SearchInput input
   groupByAttribute: PropTypes.string, // value for controlled GMSelect Group By dropdown
   groupByOptions: PropTypes.array, // array of option objects for the GMSelect Group By dropdown
@@ -28,6 +28,7 @@ TableToolbar.propTypes = {
   sortByAttribute: PropTypes.string, // value for controlled GMSelect Sort By dropdown
   sortByOptions: PropTypes.array, // array of option objects for the GMSelect Sort By dropdown
   sortByProps: PropTypes.object, // optional props that will be passed down to GMSelect Sort By dropdown
+
   // the following are optional props to be rendered as children of their respective columns
   toolbarCenterChildren: PropTypes.oneOfType([
     PropTypes.element,
@@ -60,7 +61,8 @@ export default function TableToolbar({
     <Toolbar>
       <ToolbarLeft>
         {setFilterString &&
-          searchPlaceholder && (
+          searchPlaceholder &&
+          filterString != null && (
             <Form>
               <SearchInput
                 {...searchInputProps}
@@ -83,8 +85,8 @@ export default function TableToolbar({
               label="Card"
             />
             <Button
-              active={displayType === "Table"}
-              clickAction={() => setDisplayType("Table")}
+              active={displayType === "List"}
+              clickAction={() => setDisplayType("List")}
               glyph="List"
               label="List"
             />

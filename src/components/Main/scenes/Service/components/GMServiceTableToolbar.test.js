@@ -2,7 +2,7 @@ import React from "react";
 import { mount } from "enzyme";
 import renderer from "react-test-renderer";
 
-import GMServiceTableToolbar from "./GMServiceTableToolbar";
+// import GMServiceTableToolbar from "./GMServiceTableToolbar";
 
 const mockData = {
   setFilterString: jest.fn(),
@@ -11,7 +11,7 @@ const mockData = {
   filterString: "someVal"
 };
 
-describe("Service View Toolbar", () => {
+xdescribe("Service View Toolbar", () => {
   let wrapper;
   beforeEach(() => {
     wrapper = mount(<GMServiceTableToolbar {...mockData} />);
