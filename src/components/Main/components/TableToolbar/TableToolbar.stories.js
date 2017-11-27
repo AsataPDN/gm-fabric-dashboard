@@ -71,6 +71,7 @@ storiesOf("Table Toolbar", module)
           setDisplayType={() => alert("Fired setDisplayType()")}
           setFilterString={() => alert("Fired setFilterString()")}
           filterString={text("filterString", "string to search")}
+          searchPlaceholder="Search Services"
           groupByOptions={object("groupByOptions", groupByOptions)}
           groupByAttribute={select(
             "groupByAttribute",
@@ -89,6 +90,7 @@ storiesOf("Table Toolbar", module)
           setDisplayType={() => alert("Fired setDisplayType()")}
           setFilterString={() => alert("Fired setFilterString()")}
           filterString={text("filterString", "string to search")}
+          searchPlaceholder="Search Something"
           sortByOptions={object("sortByOptions", sortByOptions)}
           sortByAttribute={select(
             "sortByAttribute",
