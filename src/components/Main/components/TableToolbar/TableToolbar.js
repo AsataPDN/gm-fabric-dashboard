@@ -13,6 +13,13 @@ import ToolbarLeft from "./components/ToolbarLeft";
 import ToolbarRight from "./components/ToolbarRight";
 import ToolbarCenter from "./components/ToolbarCenter";
 
+/** A reusable toolbar that renders any combination of search box, display type toggle buttons,
+ *  and sorting or grouping dropdowns. To render a subcomponent, pass it the correct props.
+ *  You may also use toolbar children props to render custom subcomponents.
+ * @function TableToolbar
+ * @props {Component}
+ */
+
 TableToolbar.propTypes = {
   displayType: PropTypes.oneOf(["Card", "List"]), // if this is a Fabric Grid Toolbar, display type buttons will be rendered
   filterString: PropTypes.string, // value for controlled SearchInput input

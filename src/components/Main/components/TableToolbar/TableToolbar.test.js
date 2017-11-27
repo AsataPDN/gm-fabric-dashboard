@@ -47,9 +47,9 @@ describe("Table Toolbar", () => {
     expect(wrapper.find({ type: "search" })).toHaveLength(1);
   });
 
-  test("does not render search box if setDisplayType, searchPlaceholder, and filterString are not provided", () => {
+  test("does not render search box if setFilterString, searchPlaceholder, or filterString are not provided", () => {
     wrapper.setProps({
-      setDisplayType: null,
+      setFilterString: null,
       filterString: null,
       searchPlaceholder: null
     });
@@ -60,6 +60,16 @@ describe("Table Toolbar", () => {
     // Find buttons with title attributes "Card" and "List"
     expect(wrapper.find("button").find({ title: "Card" })).toHaveLength(1);
     expect(wrapper.find("button").find({ title: "List" })).toHaveLength(1);
+  });
+
+  test("does not render display type buttons if setDisplayType or displayType are not provided", () => {
+    wrapper.setProps({
+      setDisplayType: null,
+      displayType: null
+    });
+    // Find buttons with title attributes "Card" and "List"
+    expect(wrapper.find("button").find({ title: "Card" })).toHaveLength(0);
+    expect(wrapper.find("button").find({ title: "List" })).toHaveLength(0);
   });
 
   test("adds an active class to button that matches displayType", () => {
@@ -83,6 +93,19 @@ describe("Table Toolbar", () => {
     expect(dropdown.props().value).toBe("SampleVal1");
   });
 
+  test("does not render a group by dropdown if setGroupByAttribute, groupByOptions, or groupByAttribute is not provided", () => {
+    wrapper.setProps({
+      setGroupByAttribute: null,
+      groupByOptions: null,
+      groupByAttribute: null
+    });
+    const dropdown = wrapper
+      .find("Select")
+      .find("input")
+      .find({ name: "form-field-group-by" });
+    expect(dropdown).toHaveLength(0);
+  });
+
   test("renders a sort by dropdown", () => {
     const dropdown = wrapper
       .find("Select")
@@ -90,5 +113,18 @@ describe("Table Toolbar", () => {
       .find({ name: "form-field-sort-by" });
     expect(dropdown).toHaveLength(1);
     expect(dropdown.props().value).toBe("SampleVal2");
+  });
+
+  test("does not render a group by dropdown if setSortByAttribute, sortByOptions, or sortByAttribute is not provided", () => {
+    wrapper.setProps({
+      setSortByAttribute: null,
+      sortByOptions: null,
+      sortByAttribute: null
+    });
+    const dropdown = wrapper
+      .find("Select")
+      .find("input")
+      .find({ name: "form-field-sort-by" });
+    expect(dropdown).toHaveLength(0);
   });
 });
