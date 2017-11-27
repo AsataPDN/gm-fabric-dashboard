@@ -17,7 +17,6 @@ import ToolbarCenter from "./components/ToolbarCenter";
  *  and sorting or grouping dropdowns. To render a subcomponent, pass it the correct props.
  *  You may also use toolbar children props to render custom subcomponents.
  * @function TableToolbar
- * @props {Component}
  */
 
 TableToolbar.propTypes = {
