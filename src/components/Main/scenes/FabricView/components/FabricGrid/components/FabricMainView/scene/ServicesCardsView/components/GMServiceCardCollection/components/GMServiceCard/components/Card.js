@@ -64,6 +64,8 @@ export const CardContainer = styled.div`
     &:focus {
       transform: scale(${CARD_INTERACTION_SCALE});
       transition: all 0.1s ease;
+      backface-visibility: hidden;
+      -webkit-font-smoothing: antialiased;
 
       h1,
       footer {
