@@ -1,9 +1,10 @@
 import { spacingScale } from "style/styleFunctions";
+import { NOTIFICATION_WIDTH } from "style/styleVariables";
 
 const NotificationWrapper = `
 .notifications-wrapper > [class^="notifications-"] {
    position: fixed;
-   width: 320px;
+   width: ${NOTIFICATION_WIDTH};
    padding: 0 ${spacingScale(0.5)} ${spacingScale(0.5)};
    transition: all 0.2s ease;
    border-radius: 4px;

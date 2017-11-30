@@ -2,14 +2,15 @@ import Color from "color";
 import { css } from "styled-components";
 import { contrastColor } from "./styleFunctions";
 import { injectGlobal } from "styled-components";
+
 import Nunito400 from "./fonts/Nunito/Nunito-Regular.ttf";
 import Nunito600 from "./fonts/Nunito/Nunito-SemiBold.ttf";
 import Rubik400 from "./fonts/Rubik/Rubik-Regular.ttf";
 import Rubik500 from "./fonts/Rubik/Rubik-Medium.ttf";
 import Rubik700 from "./fonts/Rubik/Rubik-Bold.ttf";
 import SourceCodePro400 from "./fonts/Source_Code_Pro/SourceCodePro-Regular.ttf";
-import NotificationWrapper from "components/Notification/components/NotificationsWrapper";
-import { spacingScale } from "./styleFunctions";
+
+// 3rd Party Styles
 
 export const COLOR_BRAND_PRIMARY = Color("#0aab2a");
 export const COLOR_BRAND_SECONDARY = Color("#002e6e");
@@ -96,8 +97,13 @@ export const CHART_BACKGROUND_COLOR = "transparent";
 export const CHART_HEIGHT_BASE = "250px";
 
 export const TABLE_BORDER = COLOR_CONTENT_BACKGROUND.darken(0.08).string();
-
 export const TABLE_HOVER = COLOR_CONTENT_BACKGROUND.darken(0.02).string();
+
+// Notifications
+
+export const NOTIFICATION_WIDTH = "320px";
+export const NOTIFICATION_BACKGROUND_COLOR = "#fff";
+export const NOTIFICATION_TRANSITION = 0.3;
 
 export const media = {
   breadcrumbsBreakpoint200: (...args) => css`
@@ -194,83 +200,5 @@ injectGlobal`
     text-decoration: none;
   }
 
-  ${NotificationWrapper}
-
-  .notification-title {
-  margin: 0 0 ${spacingScale(1)};
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: ${FONT_SIZE_SM};
-  font-family: ${FONT_STACK_DATA};
-  padding: 0;
-}
-.notification {
-  background-color: white;
-  overflow: hidden;
-  border-radius: 2px;
-  color: black;
-  font-weight: 600;
-  display: block;
-  font-size: 14px;
-  margin: 0;
-  opacity: 0;
-  position: relative;
-  transform: translateY(1em) scale(0.8);
-  transition: all 0.3s ease;
-  width: 100%;
-  z-index: 1;
-  padding: 0 ${spacingScale(1)};
-  margin: 0;
-  flex: 0 0 0px;
-  min-height: 0;
-  line-height: 0;
-
-  &[class*="-visible"] {
-    flex: 1 1;
-    opacity: 1;
-    padding: ${spacingScale(1)};
-    margin-top: ${spacingScale(1)};
-    transform: translateY(0) scale(1);
-    line-height: 1.4;
-    filter: blur(0);
-
-    > * {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  &[class*="-hidden"] {
-    transition: all 1s ease;
-    flex: 0 0 0px;
-    transform: translateY(-0.5em);
-    filter: blur(1px);
-
-    .notification-title {
-      transition: all calc(0.3s*2) ease;
-      line-height: 0;
-      margin: 0;
-    }
-
-    > * {
-      transform: translateY(-1em);
-      opacity: 0;
-    }
-  }
-
-  > * {
-    transition: opacity calc(0.3s*2) ease,
-      transform calc(0.3s*2) ease;
-    transform: translateY(100%) scale(0.8);
-    opacity: 0;
-  }
-  span.notification-dismiss {
-    display: none;
-  }
-}
-.notification-message, .notification-action-wrapper, .notification-action-button {
-  margin: 0;
-  padding: 0;
-}
+  ${NotificationStyles}
 `;
