@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NotificationSystem from "react-notification-system";
 // import "./notifications.scss";
 
-export default class NotificationCreator extends Component {
+export class Notification extends Component {
   componentDidMount() {
     window.addNotification = this.refs.notificationSystem.addNotification;
   }
@@ -13,3 +13,5 @@ export default class NotificationCreator extends Component {
     return <NotificationSystem ref="notificationSystem" style={false} />;
   }
 }
+
+export default Notification;

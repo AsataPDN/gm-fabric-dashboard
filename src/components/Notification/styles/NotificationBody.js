@@ -1,12 +1,15 @@
 import { spacingScale } from "style/styleFunctions";
 import {
   NOTIFICATION_TRANSITION,
-  NOTIFICATION_BACKGROUND
+  NOTIFICATION_BACKGROUND_COLOR
+  // FONT_SIZE_BASE
 } from "style/styleVariables";
+import { FONT_SIZE_BASE } from "../../../style/styleVariables";
 
+console.log(FONT_SIZE_BASE);
 const NotificationBody = `
 .notification {
-  background-color: ${NOTIFICATION_BACKGROUND};
+  background-color: #fff;
   overflow: hidden;
   border-radius: 2px;
   color: black;
