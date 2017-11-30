@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import NotificationSystem from "react-notification-system";
+// import "./notifications.scss";
 
-import "./notifications.scss";
-
-export default class Notification extends Component {
+export default class NotificationCreator extends Component {
   componentDidMount() {
     window.addNotification = this.refs.notificationSystem.addNotification;
   }
