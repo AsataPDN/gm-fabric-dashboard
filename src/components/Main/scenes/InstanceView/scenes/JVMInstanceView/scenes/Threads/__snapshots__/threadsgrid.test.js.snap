@@ -190,7 +190,7 @@ exports[`ThreadsGrid View matches snapshot 1`] = `
       className="sc-bdVaJa enQjcb"
     >
       <div
-        className="sc-bxivhb bnxARi"
+        className="sc-bxivhb eIKaXf"
         style={
           Object {
             "textAlign": "center",
@@ -200,7 +200,7 @@ exports[`ThreadsGrid View matches snapshot 1`] = `
         State
       </div>
       <div
-        className="sc-bxivhb bnxARi"
+        className="sc-bxivhb eIKaXf"
         style={
           Object {
             "textAlign": "center",
@@ -215,7 +215,7 @@ exports[`ThreadsGrid View matches snapshot 1`] = `
         Name
       </div>
       <div
-        className="sc-bxivhb bnxARi"
+        className="sc-bxivhb eIKaXf"
         style={
           Object {
             "textAlign": "right",
@@ -225,7 +225,7 @@ exports[`ThreadsGrid View matches snapshot 1`] = `
         Daemon
       </div>
       <div
-        className="sc-bxivhb bnxARi"
+        className="sc-bxivhb eIKaXf"
         style={
           Object {
             "textAlign": "right",
@@ -235,7 +235,7 @@ exports[`ThreadsGrid View matches snapshot 1`] = `
         Priority
       </div>
       <div
-        className="sc-bxivhb bnxARi"
+        className="sc-bxivhb eIKaXf"
       />
     </div>
     <ol
@@ -254,7 +254,7 @@ exports[`ThreadsGrid View matches snapshot 1`] = `
         tabIndex={0}
       >
         <div
-          className="sc-bZQynM cDSfIa"
+          className="sc-bZQynM eyWAkG"
           style={
             Object {
               "textAlign": "center",
@@ -297,7 +297,7 @@ exports[`ThreadsGrid View matches snapshot 1`] = `
           </svg>
         </div>
         <div
-          className="sc-bZQynM cDSfIa"
+          className="sc-bZQynM eyWAkG"
           style={
             Object {
               "textAlign": "center",
@@ -307,12 +307,17 @@ exports[`ThreadsGrid View matches snapshot 1`] = `
           2
         </div>
         <div
-          className="sc-bwzfXH dECyiq"
+          className="sc-bZQynM eyWAkG"
+          style={
+            Object {
+              "flex": "1 1 auto",
+            }
+          }
         >
           Test Runnable
         </div>
         <div
-          className="sc-bZQynM cDSfIa"
+          className="sc-bZQynM eyWAkG"
           style={
             Object {
               "textAlign": "right",
@@ -322,7 +327,7 @@ exports[`ThreadsGrid View matches snapshot 1`] = `
           Yes
         </div>
         <div
-          className="sc-bZQynM cDSfIa"
+          className="sc-bZQynM eyWAkG"
           style={
             Object {
               "textAlign": "right",
@@ -332,7 +337,7 @@ exports[`ThreadsGrid View matches snapshot 1`] = `
           8
         </div>
         <div
-          className="sc-bZQynM cDSfIa"
+          className="sc-bZQynM eyWAkG"
           style={
             Object {
               "textAlign": "center",

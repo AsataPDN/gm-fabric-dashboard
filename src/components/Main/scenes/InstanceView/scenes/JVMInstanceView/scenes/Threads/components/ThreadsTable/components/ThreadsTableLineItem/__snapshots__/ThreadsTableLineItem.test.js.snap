@@ -48,7 +48,7 @@ exports[`ThreadsTableLineItem component Matched the snapshot 1`] = `
         }
       >
         <div
-          className="sc-htpNat hCwLvp"
+          className="sc-htpNat ebBrrq"
           style={
             Object {
               "textAlign": "center",
@@ -134,7 +134,7 @@ exports[`ThreadsTableLineItem component Matched the snapshot 1`] = `
         }
       >
         <div
-          className="sc-htpNat hCwLvp"
+          className="sc-htpNat ebBrrq"
           style={
             Object {
               "textAlign": "center",
@@ -144,9 +144,20 @@ exports[`ThreadsTableLineItem component Matched the snapshot 1`] = `
           11
         </div>
       </styled.div>
-      <styled.div>
+      <styled.div
+        style={
+          Object {
+            "flex": "1 1 auto",
+          }
+        }
+      >
         <div
-          className="sc-bwzfXH dECyiq"
+          className="sc-htpNat ebBrrq"
+          style={
+            Object {
+              "flex": "1 1 auto",
+            }
+          }
         >
           finagle/netty3-7
         </div>
@@ -159,7 +170,7 @@ exports[`ThreadsTableLineItem component Matched the snapshot 1`] = `
         }
       >
         <div
-          className="sc-htpNat hCwLvp"
+          className="sc-htpNat ebBrrq"
           style={
             Object {
               "textAlign": "right",
@@ -177,7 +188,7 @@ exports[`ThreadsTableLineItem component Matched the snapshot 1`] = `
         }
       >
         <div
-          className="sc-htpNat hCwLvp"
+          className="sc-htpNat ebBrrq"
           style={
             Object {
               "textAlign": "right",
@@ -195,7 +206,7 @@ exports[`ThreadsTableLineItem component Matched the snapshot 1`] = `
         }
       >
         <div
-          className="sc-htpNat hCwLvp"
+          className="sc-htpNat ebBrrq"
           style={
             Object {
               "textAlign": "center",

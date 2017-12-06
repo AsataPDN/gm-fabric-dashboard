@@ -32,7 +32,7 @@ exports[`ThreadsTable component Matched the snapshot 1`] = `
               }
             >
               <div
-                className="sc-bxivhb bnxARi"
+                className="sc-bxivhb eIKaXf"
                 style={
                   Object {
                     "textAlign": "center",
@@ -50,7 +50,7 @@ exports[`ThreadsTable component Matched the snapshot 1`] = `
               }
             >
               <div
-                className="sc-bxivhb bnxARi"
+                className="sc-bxivhb eIKaXf"
                 style={
                   Object {
                     "textAlign": "center",
@@ -75,7 +75,7 @@ exports[`ThreadsTable component Matched the snapshot 1`] = `
               }
             >
               <div
-                className="sc-bxivhb bnxARi"
+                className="sc-bxivhb eIKaXf"
                 style={
                   Object {
                     "textAlign": "right",
@@ -93,7 +93,7 @@ exports[`ThreadsTable component Matched the snapshot 1`] = `
               }
             >
               <div
-                className="sc-bxivhb bnxARi"
+                className="sc-bxivhb eIKaXf"
                 style={
                   Object {
                     "textAlign": "right",
@@ -105,7 +105,7 @@ exports[`ThreadsTable component Matched the snapshot 1`] = `
             </styled.div>
             <styled.div>
               <div
-                className="sc-bxivhb bnxARi"
+                className="sc-bxivhb eIKaXf"
               />
             </styled.div>
           </div>
