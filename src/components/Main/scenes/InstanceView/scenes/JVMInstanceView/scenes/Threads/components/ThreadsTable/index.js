@@ -5,7 +5,7 @@ import _ from "lodash";
 import ThreadsTableHeader from "./components/ThreadsTableHeader";
 import ThreadsList from "./components/ThreadsList";
 import ThreadsTableStatusHeader from "./components/ThreadsTableStatusHeader";
-import TableColHeader from "components/Main/components/TableColHeader";
+import TableColHeaderThread from "components/Main/components/TableColHeaderThread";
 import TableDisplay from "components/Main/components/TableDisplay";
 import { threadStates } from "utils/constants";
 
@@ -58,7 +58,7 @@ export default function ThreadsTable({ filteredThreadData, groupByAttribute }) {
         <ThreadsTableHeader />
         {headers.map((header, idx) => [
           <ThreadsTableStatusHeader key={`header|${header}|${idx}`}>
-            <TableColHeader>{header}</TableColHeader>
+            <TableColHeaderThread>{header}</TableColHeaderThread>
           </ThreadsTableStatusHeader>,
           <ThreadsList
             threads={dataGroupedByHeader[header]}

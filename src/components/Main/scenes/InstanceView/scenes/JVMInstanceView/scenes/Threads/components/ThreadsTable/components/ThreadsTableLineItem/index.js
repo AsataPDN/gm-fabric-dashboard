@@ -105,7 +105,7 @@ export default class ThreadsTableLineItem extends Component {
         <TableColThread style={{ textAlign: "center" }}>{`${Number(
           id
         )}`}</TableColThread>
-        <TableCol>{name}</TableCol>
+        <TableColThread style={{ flex: "1 1 auto" }}>{name}</TableColThread>
         <TableColThread style={{ textAlign: "right" }}>
           {daemon ? "Yes" : "No"}
         </TableColThread>
