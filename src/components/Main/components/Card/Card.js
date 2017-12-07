@@ -1,35 +1,57 @@
 import React from "react";
 import { PropTypes } from "prop-types";
 
+import Icon from "components/Icon";
+import Glyph from "components/Glyphs/index";
 import CardContainer from "./components/CardContainer";
-import CardItem, { CardItemShape } from "./components/CardItem";
+import CardTitle from "./components/CardTitle";
+import CardBody from "./components/CardBody";
+// import CardDetail from "./components/CardDetail";
 
 export default function Card({
-  CardContainerStyle,
-  CardItems = [],
-  CardItemsStyle,
-  CardItemsContainerStyle
+  cardContainerStyle,
+  icon,
+  iconBackgroundStyle,
+  iconBorderStyle,
+  iconBorderWidth,
+  title,
+  value,
+  titleStyle,
+  bodyStyle
 }) {
   return (
-    <CardContainer style={CardContainerStyle}>
-      {CardItems.map(item => (
-        <CardItem
-          key={`${item.title}|${item.value}|${item.detail}`}
-          {...item}
-          CardItemsStyle={CardItemsStyle}
-          CardItemsContainerStyle={CardItemsContainerStyle}
-        />
-      ))}
+    <CardContainer style={cardContainerStyle}>
+      {icon && (
+        <Icon
+          iconBackgroundStyle={iconBackgroundStyle}
+          iconBorderStyle={iconBorderStyle}
+          iconBorderWidth={iconBorderWidth || "2"}
+        >
+          <Glyph name={icon} />
+        </Icon>
+      )}
+      <CardTitle style={titleStyle}>{title || "—"}</CardTitle>
+      <CardBody style={bodyStyle}>{value || "—"}</CardBody>
     </CardContainer>
   );
 }
 
-Card.propTypes = {
-  CardContainerStyle: PropTypes.object,
-  CardItems: PropTypes.oneOfType([
-    PropTypes.arrayOf(CardItemShape),
+const CardPropTypes = {
+  bodyStyle: PropTypes.object,
+  cacheCard: PropTypes.bool,
+  cardContainerStyle: PropTypes.object,
+  icon: PropTypes.string,
+  iconBackgroundStyle: PropTypes.string,
+  iconBorderStyle: PropTypes.string,
+  iconBorderWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  title: PropTypes.string,
+  titleStyle: PropTypes.object,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
     PropTypes.object
-  ]),
-  CardItemsContainerStyle: PropTypes.object,
-  CardItemsStyle: PropTypes.object
+  ])
 };
+
+export const CardShape = PropTypes.shape(CardPropTypes);
+Card.propTypes = CardPropTypes;
