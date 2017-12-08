@@ -4,6 +4,15 @@ import { storiesOf } from "@storybook/react";
 import { withKnobs } from "@storybook/addon-knobs";
 
 import Card from "./Card";
+import {
+  COLOR_CONTENT_BACKGROUND,
+  BORDER_RADIUS_BASE,
+  FONT_STACK_BASE,
+  FONT_SIZE_LG,
+  PADDING_BASE,
+  FONT_SIZE_HERO,
+  FONT_SIZE_BASE
+} from "style/styleVariables";
 
 const props = {
   icon: "Tape",
@@ -11,9 +20,18 @@ const props = {
   value: "162.12MB"
 };
 
+const cacheCardProps = {
+  title: "Cache Size",
+  value: "162.12MB"
+};
+
 const cardContainerStyle = { width: "50%" };
 const titleStyle = { fontSize: 50, color: "green" };
 const bodyStyle = { fontSize: 40 };
+
+const cacheCardContainerStyle = { width: "230px" };
+const cacheTitleStyle = { fontSize: FONT_SIZE_BASE, order: 1 };
+const cacheBodyStyle = { fontSize: FONT_SIZE_HERO, order: 0 };
 
 storiesOf("Card", module)
   .addDecorator(withKnobs)
@@ -45,6 +63,16 @@ storiesOf("Card", module)
         {...props}
         cardContainerStyle={cardContainerStyle}
         titleStyle={titleStyle}
+      />
+    </div>
+  ))
+  .add("Metrics Cache Card  ", () => (
+    <div>
+      <Card
+        {...cacheCardProps}
+        cardContainerStyle={cacheCardContainerStyle}
+        titleStyle={cacheTitleStyle}
+        bodyStyle={cacheBodyStyle}
       />
     </div>
   ));
