@@ -4,8 +4,11 @@ import { PropTypes } from "prop-types";
 import Icon from "components/Icon";
 import Glyph from "components/Glyphs/index";
 import CardContainer from "./components/CardContainer";
+
+import CardContent from "./components/CardContent";
 import CardTitle from "./components/CardTitle";
 import CardBody from "./components/CardBody";
+import CardChildren from "./components/CardChildren";
 // import CardDetail from "./components/CardDetail";
 
 export default function Card({
@@ -18,22 +21,27 @@ export default function Card({
   value,
   titleStyle,
   bodyStyle,
-  children
+  children,
+  childrenStyle
 }) {
   return (
     <CardContainer style={cardContainerStyle}>
-      {icon && (
-        <Icon
-          iconBackgroundStyle={iconBackgroundStyle}
-          iconBorderStyle={iconBorderStyle}
-          iconBorderWidth={iconBorderWidth || "2"}
-        >
-          <Glyph name={icon} />
-        </Icon>
+      <CardContent>
+        {icon && (
+          <Icon
+            iconBackgroundStyle={iconBackgroundStyle}
+            iconBorderStyle={iconBorderStyle}
+            iconBorderWidth={iconBorderWidth || "2"}
+          >
+            <Glyph name={icon} />
+          </Icon>
+        )}
+        <CardTitle style={titleStyle}>{title || "—"}</CardTitle>
+        <CardBody style={bodyStyle}>{value || "—"}</CardBody>
+      </CardContent>
+      {children && (
+        <CardChildren style={childrenStyle}>{children}</CardChildren>
       )}
-      <CardTitle style={titleStyle}>{title || "—"}</CardTitle>
-      <CardBody style={bodyStyle}>{value || "—"}</CardBody>
-      <div>{children}</div>
     </CardContainer>
   );
 }

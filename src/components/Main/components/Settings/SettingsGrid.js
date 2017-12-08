@@ -15,6 +15,16 @@ import Readout from "components/Main/components/Readout";
 
 import Card from "components/Main/components/Card";
 
+import {
+  COLOR_CONTENT_BACKGROUND,
+  BORDER_RADIUS_BASE,
+  FONT_STACK_BASE,
+  FONT_SIZE_LG,
+  PADDING_BASE,
+  FONT_SIZE_HERO,
+  FONT_SIZE_BASE
+} from "style/styleVariables";
+
 import "react-input-range/lib/css/index.css";
 
 /**
@@ -96,6 +106,20 @@ class SettingsGrid extends Component {
               title={"Cache Size"}
               value={metricsCacheSize}
               children={button}
+              cardContainerStyle={{ width: "230px", height: "160px" }}
+              titleStyle={{
+                fontSize: FONT_SIZE_BASE,
+                order: 2,
+                fontWeight: "normal"
+              }}
+              bodyStyle={{
+                fontSize: FONT_SIZE_HERO,
+                order: 1
+              }}
+              childrenStyle={{
+                fontSize: FONT_SIZE_HERO,
+                order: 3
+              }}
             />
           </LayoutSection>
         </ErrorBoundary>
