@@ -17,7 +17,8 @@ export default function Card({
   title,
   value,
   titleStyle,
-  bodyStyle
+  bodyStyle,
+  children
 }) {
   return (
     <CardContainer style={cardContainerStyle}>
@@ -32,6 +33,7 @@ export default function Card({
       )}
       <CardTitle style={titleStyle}>{title || "—"}</CardTitle>
       <CardBody style={bodyStyle}>{value || "—"}</CardBody>
+      <div>{children}</div>
     </CardContainer>
   );
 }
