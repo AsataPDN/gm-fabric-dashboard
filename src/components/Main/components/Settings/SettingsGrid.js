@@ -13,6 +13,8 @@ import ErrorBoundary from "components/ErrorBoundary";
 import ConfirmationModal from "components/ConfirmationModal";
 import Readout from "components/Main/components/Readout";
 
+import Card from "components/Main/components/Card";
+
 import "react-input-range/lib/css/index.css";
 
 /**
@@ -89,15 +91,11 @@ class SettingsGrid extends Component {
             title={fabricServer ? "Instance Polling" : "Polling"}
           />
           <LayoutSection icon={"Tape"} title={"Metrics Cache"} flex>
-            <Readout
+            <Card
               cacheCard={true}
-              readoutItems={[
-                {
-                  title: "Cache Size",
-                  value: `${metricsCacheSize}`,
-                  children: button
-                }
-              ]}
+              title={"Cache Size"}
+              value={metricsCacheSize}
+              children={button}
             />
           </LayoutSection>
         </ErrorBoundary>
