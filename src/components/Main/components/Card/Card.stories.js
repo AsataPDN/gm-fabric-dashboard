@@ -30,8 +30,15 @@ const titleStyle = { fontSize: 50, color: "green" };
 const bodyStyle = { fontSize: 40 };
 
 const cacheCardContainerStyle = { width: "230px" };
-const cacheTitleStyle = { fontSize: FONT_SIZE_BASE, order: 1 };
-const cacheBodyStyle = { fontSize: FONT_SIZE_HERO, order: 0 };
+const cacheTitleStyle = {
+  fontSize: FONT_SIZE_BASE,
+  order: 1,
+  fontWeight: "normal"
+};
+const cacheBodyStyle = {
+  fontSize: FONT_SIZE_HERO,
+  order: 0
+};
 
 storiesOf("Card", module)
   .addDecorator(withKnobs)
