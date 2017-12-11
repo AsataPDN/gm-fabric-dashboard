@@ -11,19 +11,11 @@ import Button from "components/Button";
 import LayoutSection from "components/LayoutSection";
 import ErrorBoundary from "components/ErrorBoundary";
 import ConfirmationModal from "components/ConfirmationModal";
-import Readout from "components/Main/components/Readout";
 
 import Card from "components/Main/components/Card";
 
-import {
-  COLOR_CONTENT_BACKGROUND,
-  BORDER_RADIUS_BASE,
-  FONT_STACK_BASE,
-  FONT_SIZE_LG,
-  PADDING_BASE,
-  FONT_SIZE_HERO,
-  FONT_SIZE_BASE
-} from "style/styleVariables";
+import { FONT_SIZE_HERO, FONT_SIZE_BASE } from "style/styleVariables";
+import { spacingScale } from "style/styleFunctions";
 
 import "react-input-range/lib/css/index.css";
 
@@ -102,23 +94,28 @@ class SettingsGrid extends Component {
           />
           <LayoutSection icon={"Tape"} title={"Metrics Cache"} flex>
             <Card
-              cacheCard={true}
               title={"Cache Size"}
               value={metricsCacheSize}
               children={button}
+              bodyStyle={{
+                fontSize: FONT_SIZE_HERO,
+                order: 1,
+                fontWeight: 500
+              }}
               cardContainerStyle={{ width: "230px", height: "160px" }}
+              childrenStyle={{
+                fontSize: FONT_SIZE_HERO,
+                order: 3
+              }}
+              mainStyle={{
+                justifyContent: "flex-end",
+                flexGrow: 1,
+                paddingTop: spacingScale(2.5)
+              }}
               titleStyle={{
                 fontSize: FONT_SIZE_BASE,
                 order: 2,
                 fontWeight: "normal"
-              }}
-              bodyStyle={{
-                fontSize: FONT_SIZE_HERO,
-                order: 1
-              }}
-              childrenStyle={{
-                fontSize: FONT_SIZE_HERO,
-                order: 3
               }}
             />
           </LayoutSection>

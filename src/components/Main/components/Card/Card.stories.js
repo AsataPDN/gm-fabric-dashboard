@@ -3,16 +3,10 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 import { withKnobs } from "@storybook/addon-knobs";
 
+import Button from "components/Button";
 import Card from "./Card";
-import {
-  COLOR_CONTENT_BACKGROUND,
-  BORDER_RADIUS_BASE,
-  FONT_STACK_BASE,
-  FONT_SIZE_LG,
-  PADDING_BASE,
-  FONT_SIZE_HERO,
-  FONT_SIZE_BASE
-} from "style/styleVariables";
+import { FONT_SIZE_HERO, FONT_SIZE_BASE } from "style/styleVariables";
+import { spacingScale } from "style/styleFunctions";
 
 const props = {
   icon: "Tape",
@@ -39,6 +33,8 @@ const cacheBodyStyle = {
   fontSize: FONT_SIZE_HERO,
   order: 0
 };
+
+const button = <Button glyph="Close" label="Clear Cache" tabIndex={0} />;
 
 storiesOf("Card", module)
   .addDecorator(withKnobs)
@@ -73,13 +69,41 @@ storiesOf("Card", module)
       />
     </div>
   ))
-  .add("Metrics Cache Card  ", () => (
+  .add("Card with custom style and order  ", () => (
     <div>
       <Card
         {...cacheCardProps}
         cardContainerStyle={cacheCardContainerStyle}
         titleStyle={cacheTitleStyle}
         bodyStyle={cacheBodyStyle}
+      />
+    </div>
+  ))
+  .add("Card with custom style, order, and children props", () => (
+    <div>
+      <Card
+        {...cacheCardProps}
+        bodyStyle={{
+          fontSize: FONT_SIZE_HERO,
+          order: 1,
+          fontWeight: 500
+        }}
+        cardContainerStyle={{ width: "230px", height: "160px" }}
+        children={button}
+        childrenStyle={{
+          fontSize: FONT_SIZE_HERO,
+          order: 3
+        }}
+        mainStyle={{
+          justifyContent: "flex-end",
+          flexGrow: 1,
+          paddingTop: spacingScale(2.5)
+        }}
+        titleStyle={{
+          fontSize: FONT_SIZE_BASE,
+          order: 2,
+          fontWeight: "normal"
+        }}
       />
     </div>
   ));
