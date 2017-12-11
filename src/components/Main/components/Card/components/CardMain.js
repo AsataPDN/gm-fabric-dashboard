@@ -4,19 +4,19 @@ import { FONT_SIZE_LG } from "style/styleVariables";
 import { spacingScale } from "style/styleFunctions";
 
 const CardMain = styled.div`
+  align-content: center;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  min-width: 200px;
   justify-content: center;
-  align-items: center;
-  align-content: center;
+  min-width: 200px;
 
   > * {
     font-size: ${FONT_SIZE_LG};
+    overflow: hidden;
+    padding-bottom: ${spacingScale(0.5)};
     padding-right: ${spacingScale(0.5)};
     padding-top: ${spacingScale(0.5)};
-    padding-bottom: ${spacingScale(0.5)};
-    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
   }

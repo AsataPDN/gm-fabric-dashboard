@@ -1,11 +1,11 @@
 import styled from "styled-components";
 
 const CardChildren = styled.div`
-  display: flex;
-  min-height: 1em;
-  justify-content: center;
-  align-items: center;
   align-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 1em;
   > * {
     align-self: center;
   }
