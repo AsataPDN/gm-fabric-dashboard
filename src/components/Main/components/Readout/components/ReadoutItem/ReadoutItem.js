@@ -19,7 +19,6 @@ import ReadoutItemDetail from "./components/ReadoutItemDetail";
 // when we have "future", "bolt", "warning", "server", "link" svg elements...
 
 export default function ReadoutItem({
-  cacheCard,
   children,
   detail,
   graphData,
@@ -34,7 +33,7 @@ export default function ReadoutItem({
   value
 }) {
   return (
-    <ItemDisplay cacheCard={cacheCard}>
+    <ItemDisplay>
       {icon && (
         <ReadoutItemIcon
           iconBackgroundStyle={iconBackgroundStyle}
@@ -68,7 +67,6 @@ export default function ReadoutItem({
 }
 
 const readoutItemPropTypes = {
-  cacheCard: PropTypes.bool,
   children: PropTypes.element,
   detail: PropTypes.string,
   graphData: PropTypes.arrayOf(PropTypes.number),
