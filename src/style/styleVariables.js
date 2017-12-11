@@ -197,8 +197,8 @@ injectGlobal`
     text-decoration: none;
   }
 
-  /* Sets the container size of react-modal too 100vh when react-modal is open,
-  centering the modal in viewport -- fixes modal vertical alignment in firefox */
+  /* fixes modal vertical alignment in firefox
+  Sets the container size of react-modal too 100vh when react-modal is open */
   .ReactModal__Overlay--after-open {
     display: block;
     height: 100vh;
