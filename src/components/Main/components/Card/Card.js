@@ -52,7 +52,7 @@ export default function Card({
   );
 }
 
-const CardPropTypes = {
+Card.propTypes = {
   bodyStyle: PropTypes.object,
   cardContainerStyle: PropTypes.object,
   children: PropTypes.element,
@@ -71,6 +71,3 @@ const CardPropTypes = {
     PropTypes.object
   ])
 };
-
-export const CardShape = PropTypes.shape(CardPropTypes);
-Card.propTypes = CardPropTypes;
