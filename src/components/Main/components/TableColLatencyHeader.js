@@ -1,21 +1,29 @@
 import React from "react";
 import TableColHeader from "./TableColHeader";
+import styled from "styled-components";
 
-const styleProps = {
-  display: "flex",
-  justifyContent: "flex-end",
-  alignItems: "center"
-};
+const LatencyHeaderWrap = TableColHeader.extend`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+`;
+
+const PercentileHeader = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+`;
 
 function TableColLatencyHeader() {
   return (
-    <TableColHeader style={styleProps}>
+    <LatencyHeaderWrap>
       <div style={{ padding: "8px" }}>Latency</div>
-      <div style={styleProps}>
+      <PercentileHeader>
         <div>50%</div>
         <div>99%</div>
-      </div>
-    </TableColHeader>
+      </PercentileHeader>
+    </LatencyHeaderWrap>
   );
 }
 export default TableColLatencyHeader;
