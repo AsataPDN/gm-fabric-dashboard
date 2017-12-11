@@ -96,7 +96,6 @@ class SettingsGrid extends Component {
             <Card
               title={"Cache Size"}
               value={metricsCacheSize}
-              children={button}
               bodyStyle={{
                 fontSize: FONT_SIZE_HERO,
                 order: 1,
@@ -119,7 +118,9 @@ class SettingsGrid extends Component {
                 order: 2,
                 fontWeight: "normal"
               }}
-            />
+            >
+              {button}
+            </Card>
           </LayoutSection>
         </ErrorBoundary>
       </div>
