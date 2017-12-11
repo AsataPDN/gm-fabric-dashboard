@@ -82,13 +82,13 @@ storiesOf("Card", module)
   .add("Card with custom style, order, and children props", () => (
     <div>
       <Card
-        {...cacheCardProps}
+        {...props}
         bodyStyle={{
           fontSize: FONT_SIZE_HERO,
           order: 1,
           fontWeight: 500
         }}
-        cardContainerStyle={{ width: "230px", height: "160px" }}
+        cardContainerStyle={{ width: "450px", height: "300px" }}
         children={button}
         childrenStyle={{
           fontSize: FONT_SIZE_HERO,
@@ -99,6 +99,9 @@ storiesOf("Card", module)
           flexGrow: 1,
           paddingTop: spacingScale(2.5)
         }}
+        sectionStyle={{
+          color: "red"
+        }}
         titleStyle={{
           fontSize: FONT_SIZE_BASE,
           order: 2,
@@ -106,4 +109,35 @@ storiesOf("Card", module)
         }}
       />
     </div>
-  ));
+  ))
+  .add(
+    "Card with custom metrics cache card style, order, and button children props",
+    () => (
+      <div>
+        <Card
+          {...cacheCardProps}
+          bodyStyle={{
+            fontSize: FONT_SIZE_HERO,
+            order: 1,
+            fontWeight: 500
+          }}
+          cardContainerStyle={{ width: "230px", height: "160px" }}
+          children={button}
+          childrenStyle={{
+            fontSize: FONT_SIZE_HERO,
+            order: 3
+          }}
+          mainStyle={{
+            justifyContent: "flex-end",
+            flexGrow: 1,
+            paddingTop: spacingScale(2.5)
+          }}
+          titleStyle={{
+            fontSize: FONT_SIZE_BASE,
+            order: 2,
+            fontWeight: "normal"
+          }}
+        />
+      </div>
+    )
+  );
