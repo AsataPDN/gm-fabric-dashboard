@@ -20,6 +20,224 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
   overflow: visible;
 }
 
+.c8 {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-weight: 600;
+  border-width: 1px;
+  line-height: 1.4;
+  border-style: solid;
+  text-transform: none;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: rgb(255,255,255);
+  border-color: rgb(255,255,255);
+  border-top-color: rgb(255,255,255);
+  border-bottom-color: rgb(240,240,240);
+  color: rgb(0,0,0);
+  font-size: 21px;
+  border-radius: 3px;
+  padding: NaNpx NaNpx;
+  padding-top: 4pxpx;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.c8:hover {
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.c8:focus,
+.c8:active {
+  -webkit-transition: all 0 ease;
+  transition: all 0 ease;
+}
+
+.c8:not([disabled]):focus {
+  outline: none;
+  box-shadow: inset 0 0 0 rgba(255,255,255,0.5), 0 0 0 1px transparentize(rgb(10,171,42),0.25), 0 0 0 4px transparentize(rgb(10,171,42),0.75);
+}
+
+.c8 > * {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c8:active {
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+  background-color: rgb(236,236,236);
+  border-color: rgb(236,236,236);
+  border-top-color: rgb(250,250,250);
+  border-bottom-color: rgb(222,222,222);
+  color: rgb(0,0,0);
+}
+
+.c8:hover {
+  background-color: rgb(251,251,251);
+  border-color: rgb(251,251,251);
+  border-top-color: rgb(255,255,255);
+  border-bottom-color: rgb(236,236,236);
+  color: rgb(0,0,0);
+}
+
+.c8:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #0aab2a;
+  z-index: 1;
+}
+
+.c8[disabled],
+.c8[disabled]:hover,
+.c8[disabled]:focus,
+.c8[disabled]:active {
+  cursor: default;
+  opacity: 0.8;
+  background-color: rgb(240,240,240);
+  border-color: rgb(240,240,240);
+  color: rgb(0,0,0);
+}
+
+.c8 > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.c8 > :not(:first-child) {
+  margin-top: 0.25px;
+}
+
+.c16 {
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-weight: 600;
+  border-width: 1px;
+  line-height: 1.4;
+  border-style: solid;
+  text-transform: none;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: rgb(255,255,255);
+  border-color: rgb(240,240,240);
+  border-top-color: rgb(255,255,255);
+  border-bottom-color: rgb(209,209,209);
+  color: rgb(0,0,0);
+  font-size: 14px;
+  border-radius: 3px;
+  padding: NaNpx NaNpx;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c16:hover {
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.c16:focus,
+.c16:active {
+  -webkit-transition: all 0 ease;
+  transition: all 0 ease;
+}
+
+.c16:not([disabled]):focus {
+  outline: none;
+  box-shadow: inset 0 0 0 rgba(255,255,255,0.5), 0 0 0 1px transparentize(rgb(10,171,42),0.25), 0 0 0 4px transparentize(rgb(10,171,42),0.75);
+}
+
+.c16 > * {
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+}
+
+.c16:active {
+  -webkit-transition-duration: 0s;
+  transition-duration: 0s;
+  background-color: rgb(236,236,236);
+  border-color: rgb(222,222,222);
+  border-top-color: rgb(243,243,243);
+  border-bottom-color: rgb(193,193,193);
+  color: rgb(0,0,0);
+}
+
+.c16:hover {
+  background-color: rgb(251,251,251);
+  border-color: rgb(236,236,236);
+  border-top-color: rgb(255,255,255);
+  border-bottom-color: rgb(206,206,206);
+  color: rgb(0,0,0);
+}
+
+.c16:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #0aab2a;
+  z-index: 1;
+}
+
+.c16[disabled],
+.c16[disabled]:hover,
+.c16[disabled]:focus,
+.c16[disabled]:active {
+  cursor: default;
+  opacity: 0.8;
+  background-color: rgb(240,240,240);
+  border-color: rgb(240,240,240);
+  color: rgb(0,0,0);
+}
+
+.c16 > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.c16 > :not(:first-child) {
+  margin-left: 4pxpx;
+  -webkit-flex-basis: auto;
+  -ms-flex-basis: auto;
+  flex-basis: auto;
+}
+
 .c0 {
   -webkit-align-items: stretch;
   -webkit-box-align: stretch;
@@ -157,7 +375,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
   transition: all 0;
 }
 
-.c8 {
+.c9 {
   -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -183,7 +401,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
   position: relative;
 }
 
-.c8 .input-range__label.input-range__label--value {
+.c9 .input-range__label.input-range__label--value {
   color: rgb(10,171,42);
   font-family: Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
   font-size: 24px;
@@ -197,11 +415,11 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
   will-change: transform;
 }
 
-.c8 .input-range__label.input-range__label--value .input-range__label-container {
+.c9 .input-range__label.input-range__label--value .input-range__label-container {
   position: static;
 }
 
-.c8 .label {
+.c9 .label {
   bottom: 10px;
   font-size: 14px;
   left: 0px;
@@ -210,13 +428,13 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
   width: 100%;
 }
 
-.c8 .input-range__slider-container {
+.c9 .input-range__slider-container {
   -webkit-transition: left 0;
   transition: left 0;
   will-change: transform;
 }
 
-.c8 .input-range__slider {
+.c9 .input-range__slider {
   background: rgb(10,171,42);
   border: none;
   border-radius: 0;
@@ -225,15 +443,15 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
   transition: transform 0.3s ease;
 }
 
-.c8 .input-range__slider:hover,
-.c8 .input-range__slider:focus,
-.c8 .input-range__slider:active {
+.c9 .input-range__slider:hover,
+.c9 .input-range__slider:focus,
+.c9 .input-range__slider:active {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.c8 .input-range__slider:before {
+.c9 .input-range__slider:before {
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
   border-top: 7px solid rgb(10,171,42);
@@ -245,12 +463,12 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
   width: 0;
 }
 
-.c8 .input-range__track {
+.c9 .input-range__track {
   background-color: rgb(230,230,230);
   border-radius: 20px;
 }
 
-.c9 {
+.c10 {
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
@@ -276,7 +494,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
   padding: 16px;
 }
 
-.c10 {
+.c11 {
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
@@ -299,7 +517,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
   min-width: 200px;
 }
 
-.c11 {
+.c12 {
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
@@ -321,7 +539,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
   min-width: 200px;
 }
 
-.c11 > * {
+.c12 > * {
   font-size: 18px;
   overflow: hidden;
   padding-bottom: 4px;
@@ -331,21 +549,21 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
   white-space: nowrap;
 }
 
-.c12 {
+.c13 {
   font-family: Rubik,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
   font-size: 11px;
   font-weight: 500;
   min-height: 1em;
 }
 
-.c13 {
+.c14 {
   font-size: 11px;
   line-height: 1.1;
   min-height: 1em;
   word-break: break-all;
 }
 
-.c14 {
+.c15 {
   -webkit-align-content: center;
   -ms-flex-line-pack: center;
   align-content: center;
@@ -364,7 +582,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
   min-height: 1em;
 }
 
-.c14 > * {
+.c15 > * {
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -423,9 +641,11 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
         className="c7"
       >
         <button
-          className="btn btn-type-polling btn-outline-raised btn-orientation-vertical"
+          className="c8"
           disabled={undefined}
           onClick={[Function]}
+          orientation="vertical"
+          size="xl"
           style={
             Object {
               "height": "100%",
@@ -436,6 +656,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
           }
           tabIndex={0}
           title="Pause Polling"
+          type="polling"
         >
           <svg
             aria-labelledby="ariaLabelledby"
@@ -467,7 +688,15 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
             </g>
           </svg>
           <span
-            className="label"
+            style={
+              Object {
+                "bottom": "10px",
+                "fontSize": "14px",
+                "left": "0px",
+                "position": "absolute",
+                "width": "100%",
+              }
+            }
           >
             
             Pause Polling
@@ -476,7 +705,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
         </button>
       </div>
       <div
-        className="c8"
+        className="c9"
         id="ctrl-slider-Fabric Polling"
       >
         <div
@@ -615,9 +844,11 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
         className="c7"
       >
         <button
-          className="btn btn-type-polling btn-outline-raised btn-orientation-vertical"
+          className="c8"
           disabled={undefined}
           onClick={[Function]}
+          orientation="vertical"
+          size="xl"
           style={
             Object {
               "height": "100%",
@@ -628,6 +859,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
           }
           tabIndex={0}
           title="Resume Polling"
+          type="polling"
         >
           <svg
             aria-labelledby="ariaLabelledby"
@@ -659,7 +891,15 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
             </g>
           </svg>
           <span
-            className="label"
+            style={
+              Object {
+                "bottom": "10px",
+                "fontSize": "14px",
+                "left": "0px",
+                "position": "absolute",
+                "width": "100%",
+              }
+            }
           >
             
             Resume Polling
@@ -668,7 +908,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
         </button>
       </div>
       <div
-        className="c8"
+        className="c9"
         id="ctrl-slider-Instance Polling"
       >
         <div
@@ -804,7 +1044,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
       className="c6"
     >
       <div
-        className="c9"
+        className="c10"
         style={
           Object {
             "height": "160px",
@@ -813,7 +1053,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
         }
       >
         <div
-          className="c10"
+          className="c11"
           style={
             Object {
               "paddingTop": "20px",
@@ -821,7 +1061,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
           }
         >
           <div
-            className="c11"
+            className="c12"
             style={
               Object {
                 "flexGrow": 1,
@@ -830,7 +1070,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
             }
           >
             <div
-              className="c12"
+              className="c13"
               style={
                 Object {
                   "fontSize": "14px",
@@ -842,7 +1082,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
               Cache Size
             </div>
             <div
-              className="c13"
+              className="c14"
               style={
                 Object {
                   "fontSize": "32px",
@@ -856,7 +1096,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
           </div>
         </div>
         <div
-          className="c10"
+          className="c11"
           style={
             Object {
               "paddingTop": "20px",
@@ -864,7 +1104,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
           }
         >
           <div
-            className="c14"
+            className="c15"
             style={
               Object {
                 "fontSize": "32px",
@@ -873,12 +1113,15 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
             }
           >
             <button
-              className="btn"
+              className="c16"
               disabled={undefined}
               onClick={[Function]}
+              orientation={undefined}
+              size={undefined}
               style={undefined}
               tabIndex={0}
               title="Clear Cache"
+              type={undefined}
             >
               <svg
                 aria-labelledby="ariaLabelledby"
@@ -910,7 +1153,7 @@ exports[`SettingsGrid component Matches snapshot 1`] = `
                 </g>
               </svg>
               <span
-                className="label"
+                style={undefined}
               >
                 
                 Clear Cache
