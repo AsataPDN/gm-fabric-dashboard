@@ -109,7 +109,9 @@ class SettingsGrid extends Component {
               }}
               mainStyle={{
                 justifyContent: "flex-end",
-                flexGrow: 1,
+                flexGrow: 1
+              }}
+              sectionStyle={{
                 paddingTop: spacingScale(2.5)
               }}
               titleStyle={{
