@@ -73,9 +73,7 @@ export const FONT_GROUP_DATA_MONO = "Source Code Pro";
 
 export const FONT_STACK_BASE = `${FONT_GROUP_MAIN_TEXT}, ${FONT_GROUP_SYSTEM}`;
 export const FONT_STACK_DATA = `${FONT_GROUP_DATA}, ${FONT_GROUP_SYSTEM}`;
-export const FONT_STACK_DATA_MONO = `${FONT_GROUP_DATA_MONO}, ${
-  FONT_GROUP_DATA
-}, ${FONT_GROUP_SYSTEM}`;
+export const FONT_STACK_DATA_MONO = `${FONT_GROUP_DATA_MONO}, ${FONT_GROUP_DATA}, ${FONT_GROUP_SYSTEM}`;
 export const FONT_STACK_CODE = FONT_GROUP_CODE;
 
 export const LINE_HEIGHT_BASE = 1.4;
@@ -197,6 +195,17 @@ injectGlobal`
 
   a {
     text-decoration: none;
+  }
+
+  /* Sets the container size of react-modal too 100vh when react-modal is open,
+  centering the modal in viewport -- fixes modal vertical alignment in firefox */
+  .ReactModal__Overlay--after-open {
+    display: block;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
   }
 
 `;
