@@ -47,10 +47,8 @@ describe("SettingsGrid component", () => {
     expect(SettingGridWrap.find("PollingSettings").length).toBe(2);
   });
 
-  test("Has Cache Size readout", () => {
-    expect(SettingGridWrap.find("Readout").props().readoutItems[0].title).toBe(
-      "Cache Size"
-    );
+  test("Has Cache Size card", () => {
+    expect(SettingGridWrap.find("Card").props().title).toBe("Cache Size");
   });
 
   test("Clear Cache button exists", () => {
