@@ -1,18 +1,267 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PollingSettings component Matches the snapshot 1`] = `
+.c4 {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.c3 {
+  z-index: 1;
+  height: 24px;
+  width: 24px;
+  color: currentColor;
+  word-spacing: 0;
+  vertical-align: middle;
+}
+
+.c3:not(:root) {
+  overflow: visible;
+}
+
+.c0 {
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  color: rgb(32,32,32);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.c0:first-of-type > * {
+  border-top: 0;
+}
+
+.c1 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-top: 1px solid rgb(217,217,217);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 16px;
+  width: 100%;
+}
+
+.c6 {
+  margin: 0 auto;
+  max-width: 1300px;
+  padding: 8px;
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c2 {
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  padding-right: 8px !important;
+}
+
+.c5 {
+  color: inherit;
+  font-size: 18px;
+  margin: 0;
+}
+
+.c7 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  border: 1px solid rgb(230,230,230);
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 160px;
+  -ms-flex: 0 0 160px;
+  flex: 0 0 160px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 140px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 160px;
+}
+
+.c7 .label {
+  bottom: 10px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.c7 > svg {
+  color: rgb(10,171,42);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  will-change: transform;
+}
+
+.c7 .btn-type-polling > svg {
+  height: 100%;
+}
+
+.c7:hover svg,
+.c7:active svg,
+.c7:focus svg {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.c7:active svg {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: all 0;
+  transition: all 0;
+}
+
+.c8 {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid rgb(230,230,230);
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 50%;
+  -ms-flex: 0 1 50%;
+  flex: 0 1 50%;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-left: 16px;
+  padding: 32px;
+  position: relative;
+}
+
+.c8 .input-range__label.input-range__label--value {
+  color: rgb(10,171,42);
+  font-family: Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  font-size: 24px;
+  font-weight: 500 + 100;
+  line-height: 0;
+  margin-left: -50%;
+  -webkit-transform: translateX(-50%) translateY(4px);
+  -ms-transform: translateX(-50%) translateY(4px);
+  transform: translateX(-50%) translateY(4px);
+  text-align: center;
+  will-change: transform;
+}
+
+.c8 .input-range__label.input-range__label--value .input-range__label-container {
+  position: static;
+}
+
+.c8 .label {
+  bottom: 10px;
+  font-size: 14px;
+  left: 0px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.c8 .input-range__slider-container {
+  -webkit-transition: left 0;
+  transition: left 0;
+  will-change: transform;
+}
+
+.c8 .input-range__slider {
+  background: rgb(10,171,42);
+  border: none;
+  border-radius: 0;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.c8 .input-range__slider:hover,
+.c8 .input-range__slider:focus,
+.c8 .input-range__slider:active {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.c8 .input-range__slider:before {
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 7px solid rgb(10,171,42);
+  color: rgb(10,171,42);
+  content: "";
+  height: 0;
+  position: absolute;
+  top: 100%;
+  width: 0;
+}
+
+.c8 .input-range__track {
+  background-color: rgb(230,230,230);
+  border-radius: 20px;
+}
+
 <section
-  className="sc-htpNat hqfgNm"
+  className="c0"
 >
   <header
-    className="sc-bxivhb cnFCnx"
+    className="c1"
   >
     <span
-      className="sc-EHOje bfNwRO"
+      className="c2"
     >
       <svg
         aria-labelledby="ariaLabelledby"
-        className="sc-bwzfXH flKpft"
+        className="c3"
         focusable="false"
         version="1.1"
         viewBox="0 0 24 24"
@@ -20,7 +269,7 @@ exports[`PollingSettings component Matches the snapshot 1`] = `
         xmlnsXlink="http://www.w3.org/1999/xlink"
       >
         <g
-          className="sc-bdVaJa iPrjqu"
+          className="c4"
           fill="currentColor"
           title=""
         >
@@ -41,16 +290,16 @@ exports[`PollingSettings component Matches the snapshot 1`] = `
       </svg>
     </span>
     <h3
-      className="sc-bZQynM hEJNNX"
+      className="c5"
     >
       Instance Polling
     </h3>
   </header>
   <div
-    className="sc-ifAKCX gYPKtN"
+    className="c6"
   >
     <div
-      className="sc-gzVnrw jEOHSk"
+      className="c7"
     >
       <button
         className="btn btn-type-polling btn-outline-raised btn-orientation-vertical"
@@ -69,7 +318,7 @@ exports[`PollingSettings component Matches the snapshot 1`] = `
       >
         <svg
           aria-labelledby="ariaLabelledby"
-          className="sc-bwzfXH flKpft"
+          className="c3"
           focusable="false"
           version="1.1"
           viewBox="0 0 24 24"
@@ -77,7 +326,7 @@ exports[`PollingSettings component Matches the snapshot 1`] = `
           xmlnsXlink="http://www.w3.org/1999/xlink"
         >
           <g
-            className="sc-bdVaJa iPrjqu"
+            className="c4"
             fill="currentColor"
             title=""
           >
@@ -106,7 +355,7 @@ exports[`PollingSettings component Matches the snapshot 1`] = `
       </button>
     </div>
     <div
-      className="sc-htoDjs guaXXs"
+      className="c8"
       id="ctrl-slider-Instance Polling"
     >
       <div
